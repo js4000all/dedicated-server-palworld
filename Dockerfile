@@ -1,5 +1,5 @@
-FROM steamcmd/steamcmd:alpine
-LABEL maintainer="js4000all@gmail.com" version="0.2.0"
+FROM cm2network/steamcmd
+LABEL maintainer="js4000all@gmail.com" version="0.1.0"
 
 ARG PAL_HOME=/opt/palworld
 
