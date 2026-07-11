@@ -1,0 +1,330 @@
+# palworld.conf.example
+#
+# Palworld dedicated server settings source file.
+# One setting per line: KEY=VALUE
+#
+# Rules:
+# - Blank lines are ignored.
+# - Lines beginning with "#" or ";" are comments.
+# - Do not add a trailing comma.
+# - Strings use double quotes.
+# - Booleans use True / False.
+# - This file is intended to be converted into:
+#     [/Script/Pal.PalGameWorldSettings]
+#     OptionSettings=(KEY=VALUE,...)
+#
+# The values below are example values, not a guarantee of the game's defaults.
+# Please check this link for details:
+# https://docs.palworldgame.com/settings-and-operation/configuration/
+
+# =============================================================================
+# Performance
+# =============================================================================
+
+# Total number of bases across the server.
+BaseCampMaxNum=128
+
+# Maximum number of bases per guild. Documented default: 4, maximum: 10.
+BaseCampMaxNumInGuild=4
+
+# Maximum number of Pals assigned to a base. Maximum: 50.
+BaseCampWorkerMaxNum=15
+
+# Force re-sync interval while a container UI is open, in seconds.
+ItemContainerForceMarkDirtyInterval=1.000000
+
+# Per-player building limit. 0 means unlimited.
+MaxBuildingLimitNum=0
+
+# Maximum number of dropped items using physics behavior.
+PhysicsActiveDropItemMaxNum=3000
+
+# Pal replication distance from players, in centimeters.
+# Documented range: 5000 to 15000.
+ServerReplicatePawnCullDistance=15000.000000
+
+
+# =============================================================================
+# Server
+# =============================================================================
+
+# Administrator password.
+AdminPassword="your password"
+
+# Deprecated/unavailable in v1.0.0. Use CrossplayPlatforms instead.
+# AllowConnectPlatform=Steam
+
+# Allow clients with mods enabled to join.
+bAllowClientMod=False
+
+# Display the creator's player ID on buildings.
+bEnableBuildingPlayerUIdDisplay=True
+
+# Show join and leave messages.
+bIsShowJoinLeftMessage=True
+
+# Enable automatic world backups. This increases disk I/O.
+bIsUseBackupSaveData=True
+
+# Maximum chat messages per player per minute.
+ChatPostLimitPerMinute=10
+
+# Allowed platforms.
+CrossplayPlatforms=(Steam,Xbox,PS5,Mac)
+
+# Log format: Text or Json.
+LogFormatType=Text
+
+# Public IP advertised for a community server.
+# This does not change the listening address.
+PublicIP=""
+
+# Public port advertised for a community server.
+# This does not change the server's listening port.
+PublicPort=8211
+
+# Enable RCON.
+RCONEnabled=False
+
+# RCON port.
+RCONPort=25575
+
+# Enable the REST API.
+RESTAPIEnabled=False
+
+# REST API listening port.
+RESTAPIPort=8212
+
+# Server description.
+ServerDescription=""
+
+# Server name.
+ServerName="your server name"
+
+# Password required to join. Empty means no password.
+ServerPassword="your password"
+
+# Maximum number of connected players.
+ServerPlayerMaxNum=32
+
+
+# =============================================================================
+# Game features
+# =============================================================================
+
+# Offline duration before automatic guild reset is triggered.
+# Ignored when bAutoResetGuildNoOnlinePlayers=False.
+AutoResetGuildTimeNoOnlinePlayers=72.000000
+
+# Allow allocating status points to Attack.
+bAllowEnhanceStat_Attack=True
+
+# Allow allocating status points to Health.
+bAllowEnhanceStat_Health=True
+
+# Allow allocating status points to Stamina.
+bAllowEnhanceStat_Stamina=True
+
+# Allow allocating status points to Carry Weight.
+bAllowEnhanceStat_Weight=True
+
+# Allow allocating status points to Work Speed.
+bAllowEnhanceStat_WorkSpeed=True
+
+# Allow exporting Pals to the Global Palbox.
+bAllowGlobalPalboxExport=False
+
+# Allow importing Pals from the Global Palbox.
+bAllowGlobalPalboxImport=False
+
+# Automatically remove a guild's structures and base Pals after inactivity.
+bAutoResetGuildNoOnlinePlayers=False
+
+# Prevent building near structures such as fast-travel points.
+bBuildAreaLimit=True
+
+# Allow character recreation after death in Hardcore mode.
+bCharacterRecreateInHardcore=False
+
+# Show the number of PvP-specific items at each base on the world map.
+bDisplayPvPItemNumOnWorldMap_BaseCamp=False
+
+# Show player locations and PvP-specific item counts on the world map.
+bDisplayPvPItemNumOnWorldMap_Player=False
+
+# Enable fast travel.
+bEnableFastTravel=True
+
+# Restrict fast travel to travel between bases only.
+bEnableFastTravelOnlyBaseCamp=False
+
+# Enable enemy raids.
+bEnableInvaderEnemy=True
+
+# Enable voice chat.
+bEnableVoiceChat=True
+
+# Leave logged-out players sleeping at their logout position.
+bExistPlayerAfterLogout=False
+
+# Enable Hardcore mode.
+bHardcore=False
+
+# Hide other guilds' base-area effects.
+bInvisibleOtherGuildBaseCampAreaFX=False
+
+# Enable PvP.
+bIsPvP=False
+
+# Fully randomize wild Pal levels when randomizer mode is enabled.
+# False keeps levels within the range appropriate for each area.
+bIsRandomizerPalLevelRandom=False
+
+# Allow players to select their starting location on the map.
+bIsStartLocationSelectByMap=True
+
+# Show the player list on the ESC menu.
+bShowPlayerList=True
+
+# Seed used by Pal spawn randomization.
+RandomizerSeed=""
+
+# Pal spawn randomization mode: None, Region, or All.
+RandomizerType=None
+
+# Distance within which voice chat volume does not attenuate.
+VoiceChatMaxVolumeDistance=1000.000000
+
+# Distance at which voice chat volume reaches zero.
+VoiceChatZeroVolumeDistance=5000.000000
+
+
+# =============================================================================
+# Game balance
+# =============================================================================
+
+# Number of special items dropped when a player is killed in PvP.
+# Used only when bAdditionalDropItemWhenPlayerKillingInPvPMode=True.
+AdditionalDropItemNumWhenPlayerKillingInPvPMode=1
+
+# Item ID dropped when a player is killed in PvP.
+# Used only when bAdditionalDropItemWhenPlayerKillingInPvPMode=True.
+AdditionalDropItemWhenPlayerKillingInPvPMode=""
+
+# Drop a special item when a player is killed while PvP is enabled.
+bAdditionalDropItemWhenPlayerKillingInPvPMode=False
+
+# Respawn cooldown after death, in seconds.
+BlockRespawnTime=10.000000
+
+# Permanently lose Pals on death.
+bPalLost=False
+
+# Damage dealt to buildings multiplier.
+BuildObjectDamageRate=1.000000
+
+# Building deterioration speed multiplier.
+# Set according to the desired decay behavior.
+BuildObjectDeteriorationDamageRate=1.000000
+
+# Gathered item quantity multiplier.
+CollectionDropRate=1.000000
+
+# Gatherable object HP multiplier.
+CollectionObjectHpRate=1.000000
+
+# Gatherable object respawn interval multiplier.
+CollectionObjectRespawnSpeedRate=1.000000
+
+# Daytime progression speed multiplier.
+DayTimeSpeedRate=1.000000
+
+# Death penalty: None, Item, ItemAndEquipment, or All.
+DeathPenalty=All
+
+# Technologies to disable.
+# Example using Palworld's struct-array notation:
+# DenyTechnologyList=("PALBOX","RepairBench")
+DenyTechnologyList=()
+
+# Enemy item drop quantity multiplier.
+EnemyDropItemRate=1.000000
+
+# Equipment durability loss multiplier.
+EquipmentDurabilityDamageRate=1.000000
+
+# Experience gain multiplier.
+ExpRate=1.000000
+
+# Maximum number of players in a guild.
+GuildPlayerMaxNum=20
+
+# Guild rejoin cooldown, in minutes.
+GuildRejoinCooldownMinutes=60
+
+# Item spoilage speed multiplier.
+ItemCorruptionMultiplier=1.000000
+
+# Item weight multiplier.
+ItemWeightRate=1.000000
+
+# Ranch item production speed multiplier.
+MonsterFarmActionSpeedRate=1.000000
+
+# Nighttime progression speed multiplier.
+NightTimeSpeedRate=1.000000
+
+# Pal natural HP regeneration multiplier.
+PalAutoHPRegeneRate=1.000000
+
+# Pal HP regeneration while sleeping/in the Palbox multiplier.
+PalAutoHpRegeneRateInSleep=1.000000
+
+# Pal capture probability multiplier.
+PalCaptureRate=1.000000
+
+# Damage dealt by Pals multiplier.
+PalDamageRateAttack=1.000000
+
+# Damage taken by Pals multiplier.
+PalDamageRateDefense=1.000000
+
+# Huge Egg incubation time, in hours.
+PalEggDefaultHatchingTime=72.000000
+
+# Pal spawn quantity multiplier. Higher values increase server load.
+PalSpawnNumRate=1.000000
+
+# Pal stamina depletion multiplier.
+PalStaminaDecreaceRate=1.000000
+
+# Pal hunger depletion multiplier.
+PalStomachDecreaceRate=1.000000
+
+# Player natural HP regeneration multiplier.
+PlayerAutoHPRegeneRate=1.000000
+
+# Player HP regeneration while sleeping multiplier.
+PlayerAutoHpRegeneRateInSleep=1.000000
+
+# Damage dealt by players multiplier.
+PlayerDamageRateAttack=1.000000
+
+# Damage taken by players multiplier.
+PlayerDamageRateDefense=1.000000
+
+# Player stamina depletion multiplier.
+PlayerStaminaDecreaceRate=1.000000
+
+# Player hunger depletion multiplier.
+PlayerStomachDecreaceRate=1.000000
+
+# Survival-time threshold for applying RespawnPenaltyTimeScale
+# to the cooldown after a subsequent death, in seconds.
+RespawnPenaltyDurationThreshold=60.000000
+
+# Respawn cooldown multiplier.
+RespawnPenaltyTimeScale=1.000000
+
+# Meteorite and supply-drop interval, in minutes.
+SupplyDropSpan=180
