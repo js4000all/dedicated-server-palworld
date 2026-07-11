@@ -9,7 +9,4 @@ services:
       - "8211:8211/udp"
     command:
       - ./PalServer.sh
-      - -useperfthreads
-      - -NoAsyncLoadingThread
-      - -UseMultithreadForDS
       - -publiclobby
