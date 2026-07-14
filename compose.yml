@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./saved:/opt/palworld/Pal/Saved
+      - ./mods:/opt/palworld/Pal/Content/Paks/~mods:ro
     ports:
       - "8211:8211/udp"
     command:
